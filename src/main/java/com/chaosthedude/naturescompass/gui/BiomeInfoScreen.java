@@ -34,7 +34,7 @@ public class BiomeInfoScreen extends Screen {
 		this.parentScreen = parentScreen;
 		this.biome = biome;
 
-		topBlock = I18n.get(biome.getGenerationSettings().getSurfaceBuilderConfig().getTopMaterial().getBlock().getDescriptionId());
+		/*topBlock = I18n.get(biome.getGenerationSettings().getSurfaceBuilderConfig().getTopMaterial().getBlock().getDescriptionId());
 		fillerBlock = I18n.get(biome.getGenerationSettings().getSurfaceBuilderConfig().getTopMaterial().getBlock().getDescriptionId());
 
 		if (biome.getDepth() < -1) {
@@ -55,7 +55,7 @@ public class BiomeInfoScreen extends Screen {
 			heightVariation = I18n.get("string.naturescompass.high");
 		} else {
 			heightVariation = I18n.get("string.naturescompass.veryHigh");
-		}
+		}*/
 
 		if (biome.getPrecipitation() == Precipitation.SNOW) {
 			precipitation = I18n.get("string.naturescompass.snow");
@@ -104,26 +104,26 @@ public class BiomeInfoScreen extends Screen {
 		renderBackground(poseStack);
 		font.draw(poseStack, new TextComponent(BiomeUtils.getBiomeNameForDisplay(parentScreen.world, biome)), (width / 2) - (font.width(BiomeUtils.getBiomeNameForDisplay(parentScreen.world, biome)) / 2), 20, 0xffffff);
 
-		font.draw(poseStack, new TranslatableComponent("string.naturescompass.topBlock"), width / 2 - 100, 40, 0xffffff);
-		font.draw(poseStack, new TextComponent(topBlock), width / 2 - 100, 50, 0x808080);
+		//font.draw(poseStack, new TranslatableComponent("string.naturescompass.topBlock"), width / 2 - 100, 40, 0xffffff);
+		//font.draw(poseStack, new TextComponent(topBlock), width / 2 - 100, 50, 0x808080);
 
 		font.draw(poseStack, new TranslatableComponent("string.naturescompass.precipitation"), width / 2 - 100, 70, 0xffffff);
 		font.draw(poseStack, new TextComponent(precipitation), width / 2 - 100, 80, 0x808080);
 
-		font.draw(poseStack, new TranslatableComponent("string.naturescompass.baseHeight"), width / 2 - 100, 100, 0xffffff);
-		font.draw(poseStack, new TextComponent(baseHeight), width / 2 - 100, 110, 0x808080);
+		//font.draw(poseStack, new TranslatableComponent("string.naturescompass.baseHeight"), width / 2 - 100, 100, 0xffffff);
+		//font.draw(poseStack, new TextComponent(baseHeight), width / 2 - 100, 110, 0x808080);
 
 		font.draw(poseStack, new TranslatableComponent("string.naturescompass.rainfall"), width / 2 - 100, 130, 0xffffff);
 		font.draw(poseStack, new TextComponent(rainfall), width / 2 - 100, 140, 0x808080);
 
-		font.draw(poseStack, new TranslatableComponent("string.naturescompass.fillerBlock"), width / 2 + 40, 40, 0xffffff);
-		font.draw(poseStack, new TextComponent(fillerBlock), width / 2 + 40, 50, 0x808080);
+		//font.draw(poseStack, new TranslatableComponent("string.naturescompass.fillerBlock"), width / 2 + 40, 40, 0xffffff);
+		//font.draw(poseStack, new TextComponent(fillerBlock), width / 2 + 40, 50, 0x808080);
 
 		font.draw(poseStack, new TranslatableComponent("string.naturescompass.temperature"), width / 2 + 40, 70, 0xffffff);
 		font.draw(poseStack, new TextComponent(temperature), width / 2 + 40, 80, 0x808080);
 
-		font.draw(poseStack, new TranslatableComponent("string.naturescompass.heightVariation"), width / 2 + 40, 100, 0xffffff);
-		font.draw(poseStack, new TextComponent(heightVariation), width / 2 + 40, 110, 0x808080);
+		//font.draw(poseStack, new TranslatableComponent("string.naturescompass.heightVariation"), width / 2 + 40, 100, 0xffffff);
+		//font.draw(poseStack, new TextComponent(heightVariation), width / 2 + 40, 110, 0x808080);
 
 		font.draw(poseStack, new TranslatableComponent("string.naturescompass.highHumidity"), width / 2 + 40, 130, 0xffffff);
 		font.draw(poseStack, new TextComponent(highHumidity), width / 2 + 40, 140, 0x808080);

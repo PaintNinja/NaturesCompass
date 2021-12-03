@@ -18,6 +18,9 @@ ehthumbs.db
 /eclipse
 /bin
 
+# IntelliJ
+/.idea
+
 # Folder config file
 Desktop.ini
 

@@ -8,8 +8,6 @@ import net.minecraft.server.players.ServerOpListEntry;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.storage.LevelData;
 import net.minecraft.world.level.storage.ServerLevelData;
-import net.minecraftforge.fml.LogicalSide;
-import net.minecraftforge.fmllegacy.LogicalSidedProvider;
 import net.minecraftforge.server.permission.PermissionAPI;
 
 public class PlayerUtils {
@@ -19,7 +17,7 @@ public class PlayerUtils {
 	}
 
 	public static boolean cheatModeEnabled(Player player) {
-		final MinecraftServer server = LogicalSidedProvider.INSTANCE.get(LogicalSide.SERVER);
+		final MinecraftServer server = player.getServer();
 		if (server != null && server.isSingleplayer()) {
 			LevelData levelData = server.getLevel(player.level.dimension()).getLevelData();
 			if (levelData instanceof ServerLevelData) {

@@ -10,12 +10,12 @@ public class HeightVariationCategory implements ISortingCategory {
 
 	@Override
 	public int compare(Biome biome1, Biome biome2) {
-		return Float.compare(biome1.getScale(), biome2.getScale());
+		return 0; //Float.compare(biome1.getScale(), biome2.getScale());
 	}
 
 	@Override
 	public Object getValue(Biome biome) {
-		return biome.getScale();
+		return null; //biome.getScale();
 	}
 
 	@Override

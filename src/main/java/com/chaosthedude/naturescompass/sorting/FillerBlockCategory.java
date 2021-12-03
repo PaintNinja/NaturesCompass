@@ -10,12 +10,13 @@ public class FillerBlockCategory implements ISortingCategory {
 
 	@Override
 	public int compare(Biome biome1, Biome biome2) {
-		return I18n.get(biome1.getGenerationSettings().getSurfaceBuilderConfig().getUnderMaterial().getBlock().getDescriptionId()).compareTo(I18n.get(biome2.getGenerationSettings().getSurfaceBuilderConfig().getUnderMaterial().getBlock().getDescriptionId()));
+		return 0; //I18n.get(biome1.getGenerationSettings().getSurfaceBuilderConfig().getUnderMaterial().getBlock().getDescriptionId()).compareTo(I18n.get(biome2.getGenerationSettings().getSurfaceBuilderConfig().getUnderMaterial().getBlock().getDescriptionId()));
 	}
 
 	@Override
 	public Object getValue(Biome biome) {
-		return I18n.get(biome.getGenerationSettings().getSurfaceBuilderConfig().getUnderMaterial().getBlock().getDescriptionId());
+		return null;
+		//return I18n.get(biome.getGenerationSettings().getSurfaceBuilderConfig().getUnderMaterial().getBlock().getDescriptionId());
 	}
 
 	@Override

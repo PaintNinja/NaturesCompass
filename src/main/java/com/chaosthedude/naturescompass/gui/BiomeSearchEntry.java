@@ -46,7 +46,8 @@ public class BiomeSearchEntry extends ObjectSelectionList.Entry<BiomeSearchEntry
 		Object value = parentScreen.getSortingCategory().getValue(biome);
 		if (value == null) {
 			title = I18n.get("string.naturescompass.topBlock");
-			value = I18n.get(biome.getGenerationSettings().getSurfaceBuilderConfig().getTopMaterial().getBlock().getDescriptionId());
+			//value = I18n.get(biome.getGenerationSettings().getSurfaceBuilderConfig().getTopMaterial().getBlock().getDescriptionId());
+			value = "?";
 		}
 
 		mc.font.draw(poseStack, new TextComponent(BiomeUtils.getBiomeNameForDisplay(parentScreen.world, biome)), par3 + 1, par2 + 1, 0xffffff);

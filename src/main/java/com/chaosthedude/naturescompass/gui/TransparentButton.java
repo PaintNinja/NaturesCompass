@@ -23,7 +23,7 @@ public class TransparentButton extends Button {
 			float state = 2;
 			if (!active) {
 				state = 5;
-			} else if (isHovered()) {
+			} else if (isHoveredOrFocused()) {
 				state = 4;
 			}
 			final float f = state / 2 * 0.9F + 0.1F;
